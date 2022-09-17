@@ -1,0 +1,18 @@
+@mixin flex-box($align: center, $direction: row, $justify: center)
+  align-items: $align
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+
+@mixin button($background, $color, $hover-bg, $hover-color, $shadow: 0, $padding: 0.5rem 1.5rem)
+  background-color: $background
+  border-radius: 10px
+  color: $color
+  padding: $padding
+  transition: 1s
+
+  &:hover
+    background-color: $hover-bg 
+    box-shadow: $shadow
+    color: $hover-color
+    
