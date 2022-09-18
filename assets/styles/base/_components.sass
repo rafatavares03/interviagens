@@ -1,13 +1,6 @@
-@use 'variables' as var
-@use 'mixins' as mix
+@use './base-variables' as var
+@use '../mixins' as mix
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap')
-
-* 
-  box-sizing: var.$default-box
-  margin: var.$null
-  padding: var.$null
 
 .header
   background-color: var.$header-bg
@@ -24,6 +17,9 @@
     cursor: var.$logo-cursor
     height: var.$logo-size
 
+  nav
+    display: var.$nav-mobile-display
+
   ul
     @include mix.flex-box
 
@@ -34,7 +30,6 @@
     color: var.$nav-item-color
     font-family: var.$nav-item-font
     padding: var.$nav-item-padding
-    text-decoration: var.$nav-item-decoration
     text-transform: var.$nav-item-transform
 
     &:hover
@@ -43,4 +38,18 @@
   .login 
     @extend .nav-item
     @include mix.button(var.$login-bg, var.$login-color, var.$login--hover-bg, var.$login--hover-color, var.$login-shadow)
-    margin-left: var.$login-margin
+    margin: var.$login-margin
+
+  .menu
+    height: var.$menu-size 
+    margin: var.$menu-margin
+    width: var.$menu-size
+
+
+@media screen and (min-width: 750px)
+  .header
+    nav
+      display: var.$nav-tablet-display
+
+    .menu 
+      display: var.$menu-tablet-display
