@@ -11,6 +11,7 @@ a {
 }
 
 li {
+  display: inline-block;
   list-style: none;
 }
 
@@ -42,9 +43,6 @@ li {
   flex-direction: row;
   justify-content: center;
 }
-.header-container li {
-  display: inline-block;
-}
 .header-container .nav-item, .header-container .login {
   color: #F6D56D;
   font-family: "Roboto", sans-serif;
@@ -71,6 +69,60 @@ li {
   height: 35px;
   margin: 0 1rem;
   width: 35px;
+}
+
+.modal {
+  background-color: #0D2B3FCC;
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-container {
+  background-color: #2380BE;
+  height: 100%;
+  margin-left: auto;
+  width: 90vw;
+}
+.modal-container nav, .modal-container ul {
+  height: 100%;
+}
+.modal-container ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-container li {
+  padding: 1rem;
+}
+.modal-container .nav-item, .modal-container .login {
+  color: #F6D56D;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  text-transform: uppercase;
+}
+.modal-container .nav-item:hover, .modal-container .login:hover {
+  color: #C39503;
+}
+.modal-container .login {
+  background-color: #FFC40A;
+  border-radius: 10px;
+  color: #0D2B3F;
+  padding: 0.5rem 1.5rem;
+  transition: 1s;
+}
+.modal-container .login:hover {
+  background-color: #0D2B3F;
+  box-shadow: 0;
+  color: #FFC40A;
 }
 
 @media screen and (min-width: 750px) {

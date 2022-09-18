@@ -1,7 +1,6 @@
 @use './base-variables' as var
 @use '../mixins' as mix
 
-
 .header
   background-color: var.$header-bg
   height: var.$header-height
@@ -23,33 +22,59 @@
   ul
     @include mix.flex-box
 
-  li
-    display: var.$nav-item-display
-
   .nav-item
-    color: var.$nav-item-color
-    font-family: var.$nav-item-font
-    padding: var.$nav-item-padding
-    text-transform: var.$nav-item-transform
+    @include mix.nav-item(var.$header-nav-item-padding)
 
-    &:hover
-      color: var.$nav-item--hover-color
-  
-  .login 
+
+  .login
     @extend .nav-item
-    @include mix.button(var.$login-bg, var.$login-color, var.$login--hover-bg, var.$login--hover-color, var.$login-shadow)
+    @include mix.button($shadow: var.$login-shadow)
     margin: var.$login-margin
 
   .menu
-    height: var.$menu-size 
+    height: var.$menu-size
     margin: var.$menu-margin
     width: var.$menu-size
 
+.modal
+  background-color: var.$modal-bg
+  bottom: 0
+  display: var.$modal-display
+  left: 0
+  position: var.$modal-position
+  right: 0
+  top: 0
+
+.modal.show
+  display: var.$modal-show
+
+.modal-container
+  background-color: var.$modal-container-bg
+  height: var.$modal-container-height
+  margin-left: var.$modal-container-margin
+  width: var.$modal-container-width
+
+  nav, ul
+    height: var.$modal-container-height
+
+  ul
+    @include mix.flex-box($direction: column)
+
+  li 
+    padding: var.$modal-li-padding
+
+  .nav-item
+    @include mix.nav-item(0)
+
+  .login
+    @extend .nav-item
+    @include mix.button
+    
 
 @media screen and (min-width: 750px)
   .header
     nav
       display: var.$nav-tablet-display
 
-    .menu 
+    .menu
       display: var.$menu-tablet-display
