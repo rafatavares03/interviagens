@@ -13,13 +13,14 @@
 }
 
 .banner-container {
+  margin: auto;
+  max-width: 1140px;
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #8FC6EA;
-  margin: auto;
-  max-width: 1140px;
   padding: 0 10px;
   text-align: center;
 }
@@ -28,7 +29,7 @@
   margin: 0 0 1rem 0;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (1000px) {
   .banner-container {
     align-items: flex-start;
     display: flex;
@@ -39,6 +40,106 @@
   .banner-container h2 {
     font-size: 3rem;
     max-width: 40vw;
+  }
+}
+.packages {
+  background-color: #DDE2E6;
+  padding: 5rem 10px;
+  text-align: center;
+}
+.packages .packages-title {
+  color: #034B6D;
+  font-size: 2rem;
+}
+.packages .dash {
+  background-color: #034B6D;
+  height: 3px;
+  margin: 0.5rem auto 2rem auto;
+  width: 8rem;
+}
+.packages .packages-container {
+  margin: auto;
+  max-width: 1140px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 3px #0D2B3F;
+  margin: 0 1rem 3rem 1rem;
+  position: relative;
+  width: 100%;
+}
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+.card .card-title {
+  color: #0D2B3F;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+.card .description, .card .credit {
+  color: #214054;
+  font-size: 1rem;
+}
+.card .price {
+  color: #09c909;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+.card .credit {
+  color: #af0f0f;
+}
+.card .details {
+  color: #046391;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 1rem 0 2rem 0;
+}
+.card .button {
+  background-color: #FFC40A;
+  border-radius: 10px;
+  color: #0D2B3F;
+  padding: 0.5rem 1.5rem;
+  transition: 1s;
+  border: 0;
+  bottom: -1.25rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  left: 50%;
+  margin-left: -4rem;
+  position: absolute;
+  text-transform: uppercase;
+}
+.card .button:hover {
+  background-color: #0D2B3F;
+  box-shadow: 0 0 10px 3px #409EDC;
+  color: #FFC40A;
+}
+
+@media screen and (min-width: 750px) {
+  .card {
+    max-width: auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .packages .packages-container {
+    align-items: direction-row;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card .price {
+    font-size: 2rem;
   }
 }
 

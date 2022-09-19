@@ -6,11 +6,9 @@
   height: var.$header-height
 
 .header-container
+  @include mix.container
   @include mix.flex-box($justify: space-between)
   height: var.$header-container-size
-  margin: var.$header-container-margin
-  max-width: var.$header-container-max-width
-  width: var.$header-container-size
 
   .logo, img
     cursor: var.$logo-cursor
@@ -28,7 +26,7 @@
 
   .login
     @extend .nav-item
-    @include mix.button($shadow: var.$login-shadow)
+    @include mix.button
     margin: var.$login-margin
 
   .menu
@@ -71,7 +69,7 @@
     @include mix.button
     
 
-@media screen and (min-width: 750px)
+@media screen and (var.$tablet)
   .header
     nav
       display: var.$nav-tablet-display

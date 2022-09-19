@@ -1,0 +1,81 @@
+@use 'variables' as var
+@use '../mixins' as mix
+
+.packages
+  background-color: var.$packages-bg
+  padding: var.$packages-padding
+  text-align: var.$packages-align
+
+  .packages-title
+    color: var.$packages-title-color
+    font-size: var.$packages-title-size
+
+  .dash
+    @include mix.dash
+
+  .packages-container
+    @include mix.container
+    @include mix.flex-box($direction: column)
+
+.card
+  border-radius: var.$card-radius
+  box-shadow: var.$card-shadow
+  margin: var.$card-margin
+  position: var.$card-position
+  width: var.$card-width
+
+  img
+    border-top-left-radius: var.$card-radius
+    border-top-right-radius: var.$card-radius
+    width: var.$card-width
+
+  .card-title
+    color: var.$card-title-color
+    margin: var.$card-title-margin
+    text-transform: var.$card-title-transform
+
+  .description
+    color: var.$card-description-color
+    font-size: var.$card-description-size
+
+  .price
+    color: var.$card-price-color
+    font-size: var.$card-price-size
+    margin: var.$card-price-margin
+
+  .credit
+    @extend .description
+    color: var.$credit-color
+
+  .details
+    color: var.$card-details-color
+    font-size: var.$card-details-size
+    font-style: var.$card-details-style
+    font-weight: var.$card-details-weight
+    margin: var.$card-details-margin
+
+  .button
+    @include mix.button($shadow: var.$card-button-shadow)
+    border: 0
+    bottom: var.$card-button-bottom
+    font-family: var.$card-button-font
+    font-size: var.$card-button-size
+    font-weight: var.$card-button-weight
+    left: var.$card-button-left
+    margin-left: var.$card-button-margin
+    position: var.$card-button-position
+    text-transform: var.$card-button-transform
+
+
+@media screen and (min-width: var.$tablet)
+  .card
+    max-width: auto
+
+@media screen and (min-width: var.$desktop)
+  .packages
+    .packages-container
+      @include mix.flex-box(direction-row)
+
+  .card
+    .price
+      font-size: var.$card-price-desktop-size

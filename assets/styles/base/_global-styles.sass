@@ -1,7 +1,7 @@
 @use '../_abstract-variables' as var
   
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap');
 
 * 
   box-sizing: var.$default-box
@@ -11,11 +11,13 @@
 a 
   text-decoration: var.$none
 
-h1, h2, h3
+h1, h2, h3, h4
   font-family: var.$font-title 
+  font-weight: var.$title-weight
 
 h2
   font-size: var.$h2-size
+
 
 li
   display: var.$li-display

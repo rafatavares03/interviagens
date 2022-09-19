@@ -15,10 +15,9 @@
     background-color: #111a
 
 .banner-container
+  @include mix.container
   @include mix.flex-box($direction: column)
   color: var.$banner-container-txt-color
-  margin: var.$banner-container-margin
-  max-width: var.$banner-container-max-width
   padding: var.$banner-container-padding
   text-align: var.$banner-container-align-mobile
 
@@ -26,7 +25,7 @@
     font-size: var.$banner-title-mobile-size
     margin: var.$banner-title-margin
 
-@media screen and (min-width: 1000px)
+@media screen and (var.$desktop)
   .banner-container
     @include mix.flex-box(flex-start, column)
     text-align: var.$banner-container-align-desktop
