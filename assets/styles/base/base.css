@@ -10,9 +10,21 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
 li {
   display: inline-block;
   list-style: none;
+}
+
+p {
+  font-family: "Lora", serif;
 }
 
 .header {

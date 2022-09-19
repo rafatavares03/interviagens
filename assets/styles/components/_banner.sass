@@ -1,0 +1,35 @@
+@use 'variables' as var
+@use '../_mixins' as mix
+
+.banner
+  background: var.$banner-bg
+  background-color: var.$banner-bg-color
+  background-size: var.$banner-bg-size
+  background-position: var.$banner-bg-position
+  height: var.$banner-height
+
+  .banner-shadow, .banner-container
+    height: var.$banner-height
+
+  .banner-shadow
+    background-color: #111a
+
+.banner-container
+  @include mix.flex-box($direction: column)
+  color: var.$banner-container-txt-color
+  margin: var.$banner-container-margin
+  max-width: var.$banner-container-max-width
+  padding: var.$banner-container-padding
+  text-align: var.$banner-container-align-mobile
+
+  h2
+    font-size: var.$banner-title-mobile-size
+    margin: var.$banner-title-margin
+
+@media screen and (min-width: 1000px)
+  .banner-container
+    @include mix.flex-box(flex-start, column)
+    text-align: var.$banner-container-align-desktop
+    h2
+      font-size: var.$banner-title-desktop-size
+      max-width: var.$banner-title-desktop-width

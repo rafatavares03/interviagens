@@ -1,0 +1,45 @@
+.banner {
+  background: url("../../../media/banner.jpg");
+  background-color: #8FC6EA;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 80px);
+}
+.banner .banner-shadow, .banner .banner-container {
+  height: calc(100vh - 80px);
+}
+.banner .banner-shadow {
+  background-color: #111a;
+}
+
+.banner-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #8FC6EA;
+  margin: auto;
+  max-width: 1140px;
+  padding: 0 10px;
+  text-align: center;
+}
+.banner-container h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .banner-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  .banner-container h2 {
+    font-size: 3rem;
+    max-width: 40vw;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
