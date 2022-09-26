@@ -66,68 +66,85 @@
   flex-direction: column;
   justify-content: center;
 }
+.packages .observation {
+  color: #0D2B3F;
+  font-size: 1.2rem;
+  padding: 2rem 0 0 0;
+}
+.packages .observation a {
+  color: #069FE9;
+}
 
 .card {
   border-radius: 20px;
-  box-shadow: 0 5px 10px 3px #0D2B3F;
+  box-shadow: 0 6px 8px 3px #0D2B3F;
   margin: 0 1rem 3rem 1rem;
-  position: relative;
+  overflow: hidden;
   width: 100%;
 }
 .card img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   width: 100%;
 }
 .card .card-title {
   color: #0D2B3F;
-  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
   text-transform: uppercase;
 }
 .card .description, .card .credit {
   color: #214054;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .card .price {
-  color: #09c909;
+  color: #108710;
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0 0 0;
 }
 .card .credit {
-  color: #af0f0f;
+  color: #7a0606;
+  margin: 0 0 1rem 0;
 }
 .card .details {
-  color: #046391;
-  font-size: 1.3rem;
-  font-style: italic;
-  font-weight: 600;
-  margin: 1rem 0 2rem 0;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #466070;
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  margin: 1rem auto;
+}
+.card li {
+  display: list-item;
+  list-style: url("../../images/check-mark.png");
+  margin: 0 0 0 30%;
+  padding: 0.25rem 0;
 }
 .card .button {
   background-color: #FFC40A;
-  border-radius: 10px;
+  border-radius: 0;
   color: #0D2B3F;
   padding: 0.5rem 1.5rem;
   transition: 1s;
   border: 0;
-  bottom: -1.25rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  left: 50%;
-  margin-left: -4rem;
-  position: absolute;
   text-transform: uppercase;
+  width: 100%;
 }
 .card .button:hover {
   background-color: #0D2B3F;
-  box-shadow: 0 0 10px 3px #409EDC;
+  box-shadow: 0;
   color: #FFC40A;
 }
 
 @media screen and (min-width: 750px) {
   .card {
     max-width: auto;
+  }
+  .card li {
+    margin: 0 0 0 40%;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -140,6 +157,9 @@
 
   .card .price {
     font-size: 2rem;
+  }
+  .card li {
+    margin: 0 0 0 30%;
   }
 }
 
