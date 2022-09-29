@@ -1,5 +1,5 @@
 @use 'variables' as var
-@use '../mixins' as mix
+@use '../abstract' as abs
 
 .packages
   background-color: var.$packages-bg
@@ -11,11 +11,11 @@
     font-size: var.$packages-title-size
 
   .dash
-    @include mix.dash
+    @include abs.dash
 
   .packages-container
-    @include mix.container
-    @include mix.flex-box($direction: column)
+    @include abs.container
+    @include abs.flex-box($direction: column)
 
   .observation
     color: var.$packages-obs-color
@@ -56,7 +56,7 @@
     margin: var.$credit-margin
 
   .details
-    @include mix.flex-box(flex-start, column)
+    @include abs.flex-box(flex-start, column)
     color: var.$card-details-color
     font-family: var.$card-details-font
     font-size: var.$card-details-size
@@ -69,7 +69,7 @@
     padding: var.$card-li-padding
 
   .button
-    @include mix.button($radius: 0, $shadow: 0)
+    @include abs.button($radius: 0, $shadow: 0)
     border: 0
     font-family: var.$card-button-font
     font-size: var.$card-button-size
@@ -78,17 +78,17 @@
     width: var.$card-button-width
 
 
-@media screen and (min-width: var.$tablet)
+@media screen and (min-width: abs.$tablet)
   .card
     max-width: auto
 
     li
       margin: var.$card-li-margin-tablet
 
-@media screen and (min-width: var.$desktop)
+@media screen and (min-width: abs.$desktop)
   .packages
     .packages-container
-      @include mix.flex-box(direction-row)
+      @include abs.flex-box(direction-row)
 
   .card
     .price

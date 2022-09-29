@@ -1,5 +1,5 @@
 @use 'variables' as var
-@use '../_mixins' as mix
+@use '../abstract' as abs
 
 .banner
   background: var.$banner-bg
@@ -15,8 +15,8 @@
     background-color: #111a
 
 .banner-container
-  @include mix.container
-  @include mix.flex-box($direction: column)
+  @include abs.container
+  @include abs.flex-box($direction: column)
   color: var.$banner-container-txt-color
   padding: var.$banner-container-padding
   text-align: var.$banner-container-align-mobile
@@ -25,9 +25,9 @@
     font-size: var.$banner-title-mobile-size
     margin: var.$banner-title-margin
 
-@media screen and (var.$desktop)
+@media screen and (abs.$desktop)
   .banner-container
-    @include mix.flex-box(flex-start, column)
+    @include abs.flex-box(flex-start, column)
     text-align: var.$banner-container-align-desktop
     h2
       font-size: var.$banner-title-desktop-size

@@ -1,32 +1,32 @@
-@use './base-variables' as var
-@use '../mixins' as mix
+@use './variables' as var
+@use '../abstract' as abs
 
 .header
   background-color: var.$header-bg
   height: var.$header-height
 
 .header-container
-  @include mix.container
-  @include mix.flex-box($justify: space-between)
-  height: var.$header-container-size
+  @include abs.container
+  @include abs.flex-box($justify: space-between)
+  height: var.$header-height
 
   .logo, img
     cursor: var.$logo-cursor
     height: var.$logo-size
 
   nav
-    display: var.$nav-mobile-display
+    display: var.$nav-display
 
   ul
-    @include mix.flex-box
+    @include abs.flex-box
 
   .nav-item
-    @include mix.nav-item(var.$header-nav-item-padding)
+    @include abs.nav-item(var.$header-nav-item-padding)
 
 
   .login
     @extend .nav-item
-    @include mix.button
+    @include abs.button
     margin: var.$login-margin
 
   .menu
@@ -56,20 +56,20 @@
     height: var.$modal-container-height
 
   ul
-    @include mix.flex-box($direction: column)
+    @include abs.flex-box($direction: column)
 
   li 
     padding: var.$modal-li-padding
 
   .nav-item
-    @include mix.nav-item(0)
+    @include abs.nav-item(0)
 
   .login
     @extend .nav-item
-    @include mix.button
+    @include abs.button
     
 
-@media screen and (var.$tablet)
+@media screen and (min-width: abs.$tablet)
   .header
     nav
       display: var.$nav-tablet-display
