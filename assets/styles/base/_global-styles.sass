@@ -18,6 +18,8 @@ h1, h2, h3, h4
 h2
   font-size: abs.$h2-size
 
+input, textarea
+  outline: abs.$null
 
 li
   display: abs.$li-display
@@ -25,3 +27,28 @@ li
 
 p
   font-family: abs.$font-text
+
+.form-item
+  font-family: abs.$font-title
+  position: abs.$form-item-position 
+
+.float-label
+  color: inherit
+  position: abs.$float-label-position
+  left: abs.$float-label-left
+  top: abs.$float-label-top
+  transition: 0.5s
+
+.input
+  color: inherit
+  font-family: inherit
+  font-size: 1rem
+  padding: abs.$input-padding
+
+.input:focus + .float-label,
+.input:not(:placeholder-shown) + .float-label
+  top: 0.3rem
+  font-size: 0.75rem
+
+.title
+  font-size: abs.$title-size

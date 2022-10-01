@@ -6,12 +6,11 @@
   padding: var.$packages-padding
   text-align: var.$packages-align
 
-  .packages-title
+  .title
     color: var.$packages-title-color
-    font-size: var.$packages-title-size
 
   .dash
-    @include abs.dash
+    @include abs.dash(abs.$dash-dark)
 
   .packages-container
     @include abs.container
