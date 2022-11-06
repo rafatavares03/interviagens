@@ -1,0 +1,16 @@
+@use '../abstract' as abs
+
+.title
+  font-family: abs.$font-title 
+  font-size: 1.75rem
+  font-weight: abs.$title-weight
+
+  &--dark 
+    color: abs.$secundary-3 
+  
+  &--light
+    color: abs.$grey-100
+
+@media screen and (min-width: abs.$tablet)
+  .title
+    font-size: 2rem

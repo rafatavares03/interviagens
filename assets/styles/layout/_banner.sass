@@ -1,0 +1,24 @@
+@use '../abstract' as abs
+
+.banner
+  background: url('../../media/banner.jpg')
+  background-color: abs.$primary-1
+  background-size: cover
+  background-position: center
+  height: calc(100vh - 80px)
+  position: relative
+
+  &--shadow
+    background-color: abs.$black-transparent
+    height: 100%
+    position: absolute 
+    width: 100%
+
+  &__container
+    @include abs.flex-box($direction: column)
+    color: abs.$primary-1
+    height: 100%
+    padding: 0 10px
+    position: relative
+    text-align: center
+    z-index: 10

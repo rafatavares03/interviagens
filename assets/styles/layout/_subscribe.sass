@@ -1,0 +1,26 @@
+@use '../abstract' as abs
+  
+.subscribe
+  background: abs.$dark-gradient
+  padding: 3rem 0
+  text-align: center
+
+  &__container
+    margin-top: 3rem
+
+  &__form
+    padding: 0 1rem
+
+  .form-item
+    margin: 1.5rem 0
+
+@media screen and (min-width: abs.$tablet)
+  .subscribe
+    &__container
+      @include abs.flex-box
+
+    &__form
+      width: 100%
+
+    .form-item
+      margin-top: 0

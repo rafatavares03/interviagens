@@ -1,0 +1,19 @@
+@use '../abstract' as abs
+
+.social
+  @include abs.flex-box
+
+  &__item
+    background-color: abs.$primary-1
+    border-radius: 50%
+    height: 3rem
+    margin: 0 3px
+    padding: 0.5rem
+    transition: 0.75s
+    width: 3rem
+    &:hover 
+      background-color: abs.$accent-2
+
+  &__img
+    height: 100%
+    width: 100%

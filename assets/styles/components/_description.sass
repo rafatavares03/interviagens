@@ -1,0 +1,14 @@
+@use '../abstract' as abs
+
+.description
+  font-size: 0.9rem
+
+  &--dark 
+    color: abs.$secundary-3
+  
+  &--light
+    color: abs.$grey-100
+
+@media screen and (min-width: abs.$tablet)
+  .description
+    font-size: 1.2rem

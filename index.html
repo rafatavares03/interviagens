@@ -12,110 +12,126 @@
 
 <body>
   <header class="header">
-    <div class="header-container">
-      <h1 class="logo"><a href="#"><img src="./assets/images/logo.jpg" alt="Logo Interviagens"/></a></h1>
-      <nav>
-        <ul>
-          <li><a href="#" class="nav-item">Home</a></li>
-          <li><a href="./pages/about/" class="nav-item">Sobre</a></li>
-          <li><a href="./pages/travel-packages/" class="nav-item">Pacotes</a></li>
-          <li><a href="./pages/contact/" class="nav-item">Contato</a></li>
-          <li><a href="./pages/login/" class="login">Entrar</a></li>
+    <div class="header__container container">
+      <h1 class="header__logo"><a href="#"><img src="./assets/images/logo.jpg" alt="Logo Interviagens"/></a></h1>
+      <nav class="menu">
+        <ul class="menu__content">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="./pages/about/" class="menu__link">Sobre</a></li>
+          <li class="menu__item"><a href="./pages/travel-packages/" class="menu__link">Pacotes</a></li>
+          <li class="menu__item"><a href="./pages/contact/" class="menu__link">Contato</a></li>
+          <li class="menu__item"><a href="./pages/login/" class="btn btn--yellow">Entrar</a></li>
         </ul>
       </nav>
-      <img src="./assets/images/menu.png" alt="Menu" class="menu"/>
+      <img src="./assets/images/menu.png" alt="Toggle" class="header__toggle"/>
     </div>
   </header>
   <main>
-    <section class="modal">
-      <div class="modal-container">
-        <nav>
-          <ul>
-            <li><a href="#" class="nav-item">Home</a></li>
-            <li><a href="./pages/about/" class="nav-item">Sobre</a></li>
-            <li><a href="./pages/travel-packages/" class="nav-item">Pacotes</a></li>
-            <li><a href="./pages/contact/" class="nav-item">Contato</a></li>
-            <li><a href="./pages/login/" class="login">Entrar</a></li>
+    <section class="modal is-hidden">
+      <div class="modal__container">
+        <nav class="menu">
+          <ul class="menu__content">
+            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="./pages/about/" class="menu__link">Sobre</a></li>
+            <li class="menu__item"><a href="./pages/travel-packages/" class="menu__link">Pacotes</a></li>
+            <li class="menu__item"><a href="./pages/contact/" class="menu__link">Contato</a></li>
+            <li class="menu__item"><a href="./pages/login/" class="btn btn--yellow">Entrar</a></li>
           </ul>
         </nav>
       </div>
     </section>
     <section class="banner">
-      <div class="banner-shadow">
-        <div class="banner-container">
-          <h2>O destino para sua felicidade é aqui!</h2>
-          <p>Agende suas viagens e tenha o melhor conforto!</p>
-        </div>
+      <div class="banner--shadow"></div>
+      <div class="banner__container container">
+        <h2 class="banner__title">O destino para sua felicidade é aqui!</h2>
+        <p>Agende suas viagens e tenha o melhor conforto!</p>
       </div>
     </section>
     <section class="packages">
-      <h3 class="title">Pacotes disponíveis</h3c>
-      <div class="dash"></div>
-      <div class="packages-container">
+      <h3 class="title title--dark">Pacotes disponíveis</h3c>
+      <div class="dash dash--dark"></div>
+      <div class="packages__container container">
         <div class="card">
-          <img src="media/opaba.webp" alt="Opaba">
+          <img src="media/opaba.webp" alt="Opaba" class="card__img"/>
           <div>
-            <h4 class="card-title">Opaba</h4>
-            <p class="description">Ilheús - BA</p>
-            <ul class="details">
-              <li>Dois adultos</li>
-              <li>Passagens de ida e volta</li>
-              <li>Estadia de 7 dias</li>
-              <li>Café da manhã</li>
+            <h4 class="card__title title--dark">Opaba</h4>
+            <p class="card__description">Ilheús - BA</p>
+            <ul class="card__details">
+              <li class="card__detail">Dois adultos</li>
+              <li class="card__detail">Passagens de ida e volta</li>
+              <li class="card__detail">Estadia de 7 dias</li>
+              <li class="card__detail">Café da manhã</li>
             </ul>
-            <h5 class="price">R$7.432,53</h5>
-            <p class="credit">R$743,25 em 10x sem juros</p>
-            <input type="button" value="Ver mais" class="button">
+            <h5 class="card__price">R$7.432,53</h5>
+            <p class="card__credit">R$743,25 em 10x sem juros</p>
+            <input type="button" value="Ver mais" class="btn btn--yellow">
           </div>
         </div>
         <div class="card">
-          <img src="media/lejardin.jpg" alt="Le Jardin">
+          <img src="media/lejardin.jpg" alt="Le Jardin" class="card__img"/>
           <div>
-            <h4 class="card-title">Le Jardin</h4>
-            <p class="description">Caldas Novas -GO</p>
-            <ul class="details">
-              <li>Dois adultos</li>
-              <li>Passagens de ida e volta</li>
-              <li>Estadia de 7 dias</li>
-              <li>Café da manhã</li>
+            <h4 class="card__title title--dark">Le Jardin</h4>
+            <p class="card__description">Caldas Novas -GO</p>
+            <ul class="card__details">
+              <li class="card__detail">Dois adultos</li>
+              <li class="card__detail">Passagens de ida e volta</li>
+              <li class="card__detail">Estadia de 7 dias</li>
+              <li class="card__detail">Café da manhã</li>
             </ul>
-            <h5 class="price">R$12.205,57</h5>
-            <p class="credit">R$1.220,56 em 10x sem juros</p>
-            <input type="button" value="Ver mais" class="button">
+            <h5 class="card__price">R$12.205,57</h5>
+            <p class="card__credit">R$1.220,56 em 10x sem juros</p>
+            <input type="button" value="Ver mais" class="btn btn--yellow">
           </div>
         </div>
         <div class="card">
-          <img src="media/costao.jpg" alt="Costão do Santinho">
+          <img src="media/costao.jpg" alt="Costão do Santinho" class="card__img"/>
           <div>
-            <h4 class="card-title">Costão do Santinho</h4>
-            <p class="description">Florianópolis - SC</p>
-            <ul class="details">
-              <li>Dois adultos</li>
-              <li>Passagens de ida e volta</li>
-              <li>Estadia de 7 dias</li>
-              <li>All inclusive</li>
+            <h4 class="card__title title--dark">Costão do Santinho</h4>
+            <p class="card__description">Florianópolis - SC</p>
+            <ul class="card__details">
+              <li class="card__detail">Dois adultos</li>
+              <li class="card__detail">Passagens de ida e volta</li>
+              <li class="card__detail">Estadia de 7 dias</li>
+              <li class="card__detail">All inclusive</li>
             </ul>
-            <h5 class="price">R$28.054,55</h5>
-            <p class="credit">R$2.805,45 em 10x sem juros</p>
-            <input type="button" value="Ver mais" class="button">
+            <h5 class="card__price">R$28.054,55</h5>
+            <p class="card__credit">R$2.805,45 em 10x sem juros</p>
+            <input type="button" value="Ver mais" class="btn btn--yellow">
           </div>
         </div>
       </div>
-      <p class="observation">Caso deseja um pacote personalizado entre em <a href="./pages/contact/">contato</a> e faça seu orçamento.</p>
+      <p class="packages__observation">Caso deseja um pacote personalizado entre em <a class="observation__link" href="./pages/contact/">contato</a> e faça seu orçamento.</p>
     </section>
     <section class="subscribe">
-      <h3 class="title">Receba nossas novidades e promoções</h3>
-      <div class="dash"></div>
-      <p>Inscreva seu email para receber as melhores ofertas em primeira mão.</p>
-      <div class="subscribe-container">
-        <img src="./media/emails.svg" alt="Emails">
-        <form class="subscribe-form">
+      <h3 class="title title--light">Receba nossas novidades e promoções</h3>
+      <div class="dash dash--light"></div>
+      <p class="description description--light">Inscreva seu email para receber as melhores ofertas em primeira mão.</p>
+      <div class="subscribe__container container">
+        <img src="./media/emails.svg" alt="Emails" class="subscribe__img">
+        <form class="subscribe__form">
           <div class="form-item">
-            <input type="email" name="email" id="email" placeholder=" " class="input">
+            <input type="email" name="email" id="email" placeholder=" " class="form-item__input subscribe__input">
             <label for="email" class="float-label">Email</label>
           </div>
-          <input type="button" value="Inscrever" class="button">
+          <input type="button" value="Inscrever" class="btn btn--blue">
         </form>
+      </div>
+    </section>
+    <section class="info">
+      <div class="info__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.8931895872474!2d-43.96197458547051!3d-19.92890534342083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6976c40310591%3A0xf33ec9e4adc3d9b0!2sAv.%20Francisco%20S%C3%A1%20-%20Belo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1665944902167!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="info__container container">
+        <adress class="info__adress info__adress--local">Avenida Francisco de Sá nº 240, Barro Preto, Belo Horizonte - MG</adress>
+        <adress class="info__adress info__adress--email">interviagens@hotmail.com</adress>
+        <adress class="info__adress info__adress--phone">(31) 99999-9999</adress>
+        <p class="info__text">Acompanhe nossas redes sociais:</p>
+        <ul class="social">
+            <li class="social__item"><img src="./assets/images/facebook.svg" alt="Facebook" class="social__img"></li>
+            <li class="social__item"><img src="./assets/images/instagram.svg" alt="Instagram" class="social__img"></li>
+            <li class="social__item"><img src="./assets/images/twitter.svg" alt="Twitter" class="social__img"></li>
+            <li class="social__item"><img src="./assets/images/linkedin.svg" alt="LinkedIn" class="social__img"></li>
+        </ul>
       </div>
     </section>
   </main>

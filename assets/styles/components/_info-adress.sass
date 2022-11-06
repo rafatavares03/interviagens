@@ -1,0 +1,28 @@
+@use '../abstract' as abs
+
+.info__adress
+  color: abs.$grey-200
+  display: block
+  font-family: abs.$font-title
+  padding-left: 2.5rem
+  position: relative
+
+  &--email::before,
+  &--local::before,
+  &--phone::before
+    content: ''
+    left: 0
+    position: absolute
+    height: 2rem
+    top: -0.4rem
+    width: 2rem
+
+  &--email::before
+    background: url('../images/email.svg'), no-repeat
+
+  
+  &--local::before
+    background: url('../images/local.svg'), no-repeat
+
+  &--phone::before
+    background: url('../images/phone.svg'), no-repeat

@@ -1,0 +1,30 @@
+@use '../abstract' as abs
+
+.packages
+  background-color: abs.$grey-100
+  padding: 5rem 10px
+  text-align: center
+
+  &__container
+    @include abs.flex-box($direction: column)
+
+  .card
+    margin: 1rem 0
+    width: 100%
+
+  &__observation
+    padding-top: 2rem
+
+@media screen and (min-width: abs.$tablet)
+  .packages
+    .card
+      width: 60%
+
+@media screen and (min-width: abs.$desktop)
+  .packages
+    &__container
+      flex-direction: row
+      justify-content: space-between
+
+    .card
+      max-width: 31%

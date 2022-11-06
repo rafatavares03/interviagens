@@ -1,0 +1,31 @@
+@use '../abstract' as abs
+  
+.info
+  background-color: abs.$grey-100
+
+  &__container
+    background-color: abs.$grey-800
+    padding: 2rem 10px
+
+  &__adress
+    margin-bottom: 1rem
+
+  &__text
+    margin-top: 2rem
+
+@media screen and (min-width: abs.$desktop)
+  .info
+    @include abs.flex-box
+    height: 300px
+
+    &__map
+      @include abs.flex-box
+      width: 60%
+    
+    &__container
+      margin-left: 0
+
+@media screen and (min-width: abs.$large-desktop)
+  .info
+    &__map
+      width: 75%

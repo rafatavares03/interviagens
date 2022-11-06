@@ -1,0 +1,17 @@
+@use '../abstract' as abs
+  
+.form-item
+  font-family: abs.$font-title
+  position: relative
+
+.form-item__input
+  color: inherit
+  font-family: inherit
+  font-size: 1rem
+  padding: 1rem 1.5rem
+  width: 100%
+
+  &:focus + .float-label,
+  &:not(:placeholder-shown) + .float-label
+    top: 0.3rem
+    font-size: 0.75rem

@@ -1,0 +1,14 @@
+@use '../abstract' as abs
+
+.packages__observation
+  color: abs.$grey-700
+  font-size: 1.2rem
+
+.observation__link
+  color: abs.$secundary-1
+  &:hover
+    border-bottom: solid 2px abs.$secundary-1
+
+@media screen and (min-width: abs.$desktop) 
+  .packages__observation
+    font-size: 1.5rem
