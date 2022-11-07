@@ -1,7 +1,7 @@
 @use '../abstract' as abs
   
 .info
-  background-color: abs.$grey-100
+  background-color: abs.$grey-200
 
   &__container
     background-color: abs.$grey-800
@@ -21,9 +21,6 @@
     &__map
       @include abs.flex-box
       width: 60%
-    
-    &__container
-      margin-left: 0
 
 @media screen and (min-width: abs.$large-desktop)
   .info
