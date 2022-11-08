@@ -6,41 +6,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../assets/styles/base/base.css">
+  <link rel="stylesheet" href="./assets/styles/contact.css">
   <title>Interviagens</title>
 </head>
 
 <body>
   <header class="header">
-    <div class="header-container">
-      <h1 class="logo"><a href="../../"><img src="../../assets/images/logo.jpg" alt="Logo Interviagens"></a></h1>
-      <nav>
-        <ul>
-          <li><a href="../../" class="nav-item">Home</a></li>
-          <li><a href="../about/" class="nav-item">Sobre</a></li>
-          <li><a href="../travel-packages/" class="nav-item">Pacotes</a></li>
-          <li><a href="../contact/" class="nav-item">Contato</a></li>
-          <li><a href="../login/" class="login">Entrar</a></li>
+    <div class="header__container container">
+      <h1 class="header__logo"><a href="../../"><img src="../../assets/images/logo.jpg" alt="Logo Interviagens"></a></h1>
+      <nav class="menu">
+        <ul class="menu__content">
+          <li class="menu__item"><a href="../../" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="../about/" class="menu__link">Sobre</a></li>
+          <li class="menu__item"><a href="../travel-packages/" class="menu__link">Pacotes</a></li>
+          <li class="menu__item"><a href="../contact/" class="menu__link">Contato</a></li>
+          <li class="menu__item"><a href="../login/" class="btn btn--yellow">Entrar</a></li>
         </ul>
       </nav>
-      <img src="../../assets/images/menu.png" alt="Menu" class="menu"/>
+      <img src="../../assets/images/menu.png" alt="Toggle" class="header__toggle"/>
     </div>
   </header>
   <main>
-    <section class="modal">
-      <div class="modal-container">
-        <nav>
-          <ul>
-            <li><a href="../../" class="nav-item">Home</a></li>
-            <li><a href="../about/" class="nav-item">Sobre</a></li>
-            <li><a href="../travel-packages/" class="nav-item">Pacotes</a></li>
-            <li><a href="../contact/" class="nav-item">Contato</a></li>
-            <li><a href="../login/" class="login">Entrar</a></li>
+    <section class="modal is-hidden">
+      <div class="modal__container">
+        <nav class="menu">
+          <ul class="menu__content">
+            <li class="menu__item"><a href="../../" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="../about/" class="menu__link">Sobre</a></li>
+            <li class="menu__item"><a href="../travel-packages/" class="menu__link">Pacotes</a></li>
+            <li class="menu__item"><a href="../contact/" class="menu__link">Contato</a></li>
+            <li class="menu__item"><a href="../login/" class="btn btn--yellow">Entrar</a></li>
           </ul>
         </nav>
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <img src="../../assets/images/logo-h.jpg" alt="Logo da Interviagens" class="footer__logo">
+      <p class="footer__credits">&copy; 2022, Interviagens.</p>
+      <div class="footer__menu">
+        <nav class="menu">
+          <ul class="menu__content">
+            <li class="menu__item"><a href="../../" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="../about/" class="menu__link">Sobre</a></li>
+            <li class="menu__item"><a href="../travel-packages/" class="menu__link">Pacotes</a></li>
+            <li class="menu__item"><a href="../contact/" class="menu__link">Contato</a></li>
+            <li class="menu__item"><a href="../login/" class="menu__link">Entrar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
+
+</html>
 
 </html>
