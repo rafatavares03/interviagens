@@ -100,6 +100,14 @@ p {
   color: #C39503;
 }
 
+.modal__close {
+  height: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2.5rem;
+}
+
 .container {
   margin: auto;
   max-width: 1140px;
@@ -191,6 +199,7 @@ p {
   background-color: #2380BE;
   height: 100%;
   margin-left: auto;
+  position: relative;
   width: 90vw;
 }
 .modal .menu, .modal .menu__content {

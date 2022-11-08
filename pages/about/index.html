@@ -23,12 +23,13 @@
           <li class="menu__item"><a href="../login/" class="btn btn--yellow">Entrar</a></li>
         </ul>
       </nav>
-      <img src="../../assets/images/menu.png" alt="Toggle" class="header__toggle"/>
+      <img src="../../assets/images/menu.png" alt="Toggle" id="toggle" class="header__toggle"/>
     </div>
   </header>
   <main>
-    <section class="modal is-hidden">
+    <section class="modal is-hidden" id="modal">
       <div class="modal__container">
+        <img src="../../assets/images/close.svg" alt="Fechar" id="modal-close" class="modal__close">
         <nav class="menu">
           <ul class="menu__content">
             <li class="menu__item"><a href="../../" class="menu__link">Home</a></li>
@@ -58,6 +59,7 @@
       </div>
     </div>
   </footer>
+  <script src="../../assets/js/modal.js"></script>
 </body>
 
 </html>
