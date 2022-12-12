@@ -1,0 +1,15 @@
+@use '../abstract' as abs
+
+.menu__link
+    color: abs.$grey-100
+    font-family: abs.$font-title
+    padding-bottom: 0.5rem
+    text-transform: uppercase
+    transition: 0.10s
+
+    &:hover
+      color: abs.$primary-1
+      border-bottom: solid abs.$primary-1 3px
+
+    &--active
+      color: abs.$primary-1

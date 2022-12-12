@@ -243,12 +243,18 @@ p {
 }
 
 .menu__link {
-  color: #F6D56D;
+  color: #DDE2E6;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 0.5rem;
   text-transform: uppercase;
+  transition: 0.1s;
 }
 .menu__link:hover {
-  color: #C39503;
+  color: #8FC6EA;
+  border-bottom: solid #8FC6EA 3px;
+}
+.menu__link--active {
+  color: #8FC6EA;
 }
 
 .modal__close {
@@ -350,7 +356,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #8FC6EA;
+  color: #DDE2E6;
   height: 100%;
   padding: 0 10px;
   position: relative;
@@ -369,36 +375,27 @@ p {
   }
 }
 .footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #046391;
+  padding: 0.25rem 0.5rem;
 }
 .footer__container {
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.footer__credits {
-  order: 1;
-}
-.footer .menu__content {
-  display: grid;
-  grid-gap: 15px;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-}
-.footer .menu__item {
-  margin: auto;
-}
-.footer .menu__item:last-child {
-  grid-column: span 2;
 }
 
 @media screen and (min-width: 750px) {
   .footer__container {
     flex-direction: row;
   }
-  .footer__credits {
-    order: 0;
+  .footer__info {
+    max-width: 250px;
   }
 }
 .header {
@@ -412,24 +409,25 @@ p {
   justify-content: space-between;
   height: 100%;
 }
-.header .menu {
+.header .menu,
+.header .btn {
   display: none;
 }
-.header .menu__content {
+.header .menu__content,
+.header .btn__content {
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.header .menu__item {
+.header .menu__item,
+.header .btn__item {
   padding: 0 1rem;
-}
-.header .btn {
-  margin-left: 0.5rem;
 }
 
 @media screen and (min-width: 750px) {
-  .header .menu {
+  .header .menu,
+.header .btn {
     display: block;
   }
   .header__toggle {
@@ -458,19 +456,12 @@ p {
     justify-content: center;
     height: 300px;
   }
-  .info__map {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 60%;
-  }
 }
-@media screen and (min-width: 2000px) {
-  .info__map {
-    width: 75%;
-  }
+.map {
+  background-color: #C0C8CD;
+  padding: 0.5rem 0;
 }
+
 .modal {
   background-color: #0D2B3FCC;
   bottom: 0;
